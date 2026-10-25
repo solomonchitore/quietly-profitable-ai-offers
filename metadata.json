@@ -1,0 +1,6 @@
+{
+  "name": "Quietly Profitable AI Offers",
+  "description": "Price AI services confidently using overlooked scope details. Turn one AI capability into three defensible offers.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

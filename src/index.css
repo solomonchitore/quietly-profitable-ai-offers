@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-navy: #0A1931;
+    --color-navy-dark: #060F1E;
+    --color-navy-card: #0F2242;
+    --color-navy-border: rgba(212, 175, 55, 0.16);
+    --color-gold: #D4AF37;
+    --color-gold-light: #F5D76E;
+    --color-gold-warm: #E6C555;
+    --color-cyan: #7DD3E0;
+  }
+
+  body {
+    background-color: #0A1931;
+    color: #FFFFFF;
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: 'Cinzel', serif, system-ui;
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Metallic Gold Text */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF0B3 0%, #F5D76E 25%, #D4AF37 60%, #AA820A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-subtle {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F8E7A2 40%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.cyan-gradient-text {
+  background: linear-gradient(135deg, #E0F7FA 0%, #7DD3E0 60%, #4DB6AC 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Background Gradients & Mesh */
+.bg-mesh-pattern {
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 15% 30%, rgba(125, 211, 224, 0.05) 0%, transparent 35%),
+    radial-gradient(circle at 85% 65%, rgba(212, 175, 55, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 50% 100%, rgba(10, 25, 49, 1) 0%, transparent 60%);
+}
+
+.bg-low-poly-grid {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(212, 175, 55, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212, 175, 55, 0.03) 1px, transparent 1px);
+}
+
+/* Subtle Gold Light Streaks */
+.gold-light-streak-1 {
+  background: linear-gradient(45deg, transparent 40%, rgba(212, 175, 55, 0.08) 50%, transparent 60%);
+  filter: blur(24px);
+}
+
+.gold-light-streak-2 {
+  background: linear-gradient(135deg, transparent 35%, rgba(245, 215, 110, 0.07) 50%, transparent 65%);
+  filter: blur(30px);
+}
+
+/* 3D Book Container */
+.book-stage {
+  perspective: 1400px;
+  perspective-origin: 50% 50%;
+}
+
+.book-card-3d {
+  transform-style: preserve-3d;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+/* Card Glows */
+.card-hover-glow {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover-glow:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 10px 30px -10px rgba(212, 175, 55, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Button Shimmer */
+.gold-btn {
+  background: linear-gradient(135deg, #F5D76E 0%, #D4AF37 50%, #B89025 100%);
+  color: #0A1931;
+  font-weight: 700;
+  box-shadow: 0 4px 20px -2px rgba(212, 175, 55, 0.4);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.gold-btn:hover {
+  background: linear-gradient(135deg, #FFF1B0 0%, #F5D76E 40%, #D4AF37 100%);
+  box-shadow: 0 6px 30px 0 rgba(212, 175, 55, 0.6);
+  transform: translateY(-1px);
+}
+.gold-btn:active {
+  transform: translateY(1px);
+}
