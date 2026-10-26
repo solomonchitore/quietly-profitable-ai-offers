@@ -12,8 +12,12 @@ import { AccessModal } from './components/AccessModal';
 export default function App() {
   const [isAccessModalOpen, setIsAccessModalOpen] = useState(false);
 
+  // Send every purchase CTA to the InfluenceSoft order page.
+  // PayPal must be enabled and configured for this product inside InfluenceSoft.
   const handleOpenAccess = () => {
-    setIsAccessModalOpen(true);
+    window.location.assign(
+      'https://godigitiza.influencersoft.com/order/ai-agency-launch-system/'
+    );
   };
 
   const handleCloseAccess = () => {
